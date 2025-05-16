@@ -15,9 +15,7 @@ app.whenReady().then(() => {
     });
 
     mainWindow.loadFile("index.html");
-    //mainWindow.webContents.openDevTools();
 
-    // Cuando la ventana esté lista, enviar las ubicaciones guardadas
     mainWindow.webContents.once("did-finish-load", () => {
         const locations = readLocations();
         mainWindow.webContents.send("load-locations", locations);
@@ -51,18 +49,24 @@ const writeLocations = (data) => {
     }
 };
 
-// Guardar un nuevo punto
 ipcMain.on("save-location", (event, newLocation) => {
     const locations = readLocations();
     locations.push(newLocation);
     writeLocations(locations);
 });
 
-// Actualizar la ubicación de un marcador
 ipcMain.on("update-location", (event, updatedLocation) => {
     let locations = readLocations();
     locations = locations.map((loc) =>
         loc.nombre === updatedLocation.nombre ? updatedLocation : loc
     );
     writeLocations(locations);
+});
+
+ipcMain.on("delete-location", (event, locationToDelete) => {
+    const locations = readLocations();
+    const updatedLocations = locations.filter(
+        loc => loc.nombre !== locationToDelete.nombre
+    );
+    writeLocations(updatedLocations);
 });

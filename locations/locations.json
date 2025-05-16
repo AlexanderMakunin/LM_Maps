@@ -1,23 +1,19 @@
 [
   {
-    "nombre": "iglesia",
+    "nombre": "fgds",
+    "descripcion": "as",
     "coordenadas": {
-      "lat": 38.78920671540893,
-      "lng": 0.1636523008346558
-    }
-  },
-  {
-    "nombre": "Madrid",
-    "coordenadas": {
-      "lat": 40.299570021920246,
-      "lng": -3.6474609375000004
-    }
-  },
-  {
-    "nombre": "ibiza",
-    "coordenadas": {
-      "lat": 39.0023422714285,
-      "lng": 1.4447021484375
+      "lat": "38.790620",
+      "lng": "0.165567"
+    },
+    "pregunta": {
+      "texto": "12",
+      "opciones": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ]
     }
   }
 ]
