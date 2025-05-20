@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LeviPlanelles/ProyectoLenguaje.git"
+    "url": "git+https://github.com/AlexanderMakunin/LM_Maps.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/LeviPlanelles/ProyectoLenguaje/issues"
+    "url": "https://github.com/AlexanderMakunin/LM_Maps/issues"
   },
-  "homepage": "https://github.com/LeviPlanelles/ProyectoLenguaje#readme",
+  "homepage": "https://github.com/AlexanderMakunin/LM_Maps#readme",
   "devDependencies": {
     "electron": "^35.1.2"
   },
